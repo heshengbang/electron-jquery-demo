@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hello Sea.js</title>
+    <link rel="stylesheet" href="../assets/css/hello/style.css">
+    <script src="../assets/js/common/sea.js"></script>
+    <script src="../assets/js/common/jquery.js"></script>
+</head>
+<body>
+<div id="container">
+    <img src="../assets/img/h.png" width="44" height="44" alt="H">
+    <img src="../assets/img/e.png" width="44" height="44" alt="e">
+    <img src="../assets/img/l.png" width="44" height="44" alt="l">
+    <img src="../assets/img/l.png" width="44" height="44" alt="l">
+    <img src="../assets/img/o.png" width="44" height="44" alt="o">
+    <img src="../assets/img/,.png" width="44" height="44" alt=",">
+</div>
+
+
+<script>
+    // For development
+    if (location.href.indexOf("?dev") > 0) {
+        seajs.use("../assets/js/hello/hello-main");
+    }
+    // For production
+    else {
+        seajs.use("../assets/js/hello/hello-main");
+    }
+</script>
+</body>
+</html>
