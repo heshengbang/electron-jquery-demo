@@ -7,4 +7,3 @@
 // newWindowBtn.addEventListener('click', (event) => {
 //   console.log("fuck you");
 // });
-console.log("1");
