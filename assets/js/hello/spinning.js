@@ -1,67 +1,67 @@
 window.$ = window.jQuery = require('jquery');
-window.Tether = require('tether')
-window.Bootstrap = require('bootstrap')
+window.Tether = require('tether');
+window.Bootstrap = require('bootstrap');
 
 function Spinning(container) {
-    this.container = $(container);
-    this.icons = this.container.children();
-    this.spinnings = [];
+	this.container = window.$(container);
+	this.icons = this.container.children();
+	this.spinnings = [];
 }
 
 module.exports = Spinning;
 
 Spinning.prototype.render = function () {
-    this._init();
-    this.container.css('background', 'none');
-    this.icons.show();
-    this._spin();
-}
+	this._init();
+	this.container.css('background', 'none');
+	this.icons.show();
+	this._spin();
+};
 
 Spinning.prototype._init = function () {
-    var spinnings = this.spinnings;
+	var spinnings = this.spinnings;
 
-    $(this.icons).each(function (n) {
-        var startDeg = random(360);
-        var node = $(this);
-        var timer;
+	window.$(this.icons).each(function (n) {
+		var startDeg = random(360);
+		var node = window.$(this);
+		var timer;
 
-        node.css({
-            top: random(40),
-            left: n * 50 + random(10),
-            zIndex: 1000
-        }).hover(
-            function () {
-                node.fadeTo(250, 1)
-                    .css('zIndex', 1001)
-                    .css('transform', 'rotate(0deg)');
+		node.css({
+			top: random(40),
+			left: n * 50 + random(10),
+			zIndex: 1000
+		}).hover(
+			function () {
+				node.fadeTo(250, 1)
+					.css('zIndex', 1001)
+					.css('transform', 'rotate(0deg)');
 
-            },
-            function () {
-                node.fadeTo(250, .6).css('zIndex', 1000);
-                timer && clearTimeout(timer);
-                timer = setTimeout(spin, Math.ceil(random(10000)));
-            }
-        );
+			},
+			function () {
+				node.fadeTo(250, .6).css('zIndex', 1000);
+				timer && clearTimeout(timer);
+				timer = setTimeout(spin, Math.ceil(random(10000)));
+			}
+		);
 
-        function spin() {
-            node.css('transform', 'rotate(' + startDeg + 'deg)');
-        }
+		function spin() {
+			node.css('transform', 'rotate(' + startDeg + 'deg)');
+		}
 
-        spinnings[n] = spin;
-    })
+		spinnings[n] = spin;
+	});
 
-    return this;
-}
+	return this;
+};
 
 Spinning.prototype._spin = function () {
 
-    $(this.spinnings).each(function (i, fn) {
-        setTimeout(fn, Math.ceil(random(3000)));
-    });
+	window.$(this.spinnings).each(function (i, fn) {
+		setTimeout(fn, Math.ceil(random(3000)));
+	});
 
-    return this;
-}
+	return this;
+};
 
 function random(x) {
-    return Math.random() * x
-};
+	return Math.random() * x;
+}

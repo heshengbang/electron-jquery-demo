@@ -4,6 +4,25 @@
     <meta charset="utf-8">
     <title>Hello Sea.js</title>
     <link rel="stylesheet" href="../assets/css/hello/style.css">
+    <style>
+        body {
+            font-family: system, -apple-system, '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+            color: #fff;
+            background-color: #8aba87;
+            text-align: center;
+            font-size: 40px;
+        }
+        #back {
+            color: white;
+            opacity: 0.7;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 <div id="container">
@@ -15,9 +34,9 @@
     <!--<img src="../assets/img/,.png" width="44" height="44" alt=",">-->
 </div>
 
-
-<script>
-    require("../assets/js/hello/hello-main")
-</script>
+<a id="back" href="../index.html">Back to Before</a>
 </body>
+<script>
+	require("../assets/js/hello/hello-main")
+</script>
 </html>
