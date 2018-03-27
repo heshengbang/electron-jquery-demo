@@ -1,6 +1,6 @@
 # electron-jquery-demo
 
-This project is a simple demo for electron.
+This project is a simple demo for electron, jquery/angular contained in this application.
 
 About 2016, I began to learn SeaJs/JQuery, I found some interesting things in this [repository](https://github.com/seajs/examples).
 Recently, I begin to learn electron, So I transformed it to electron-project, so that I can package it to .exe and run it on windows desktop.
