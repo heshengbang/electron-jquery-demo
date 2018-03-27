@@ -1,7 +1,7 @@
 let Backbone, common, TodoView;
 
 Backbone = require('backbone');
-common = require('../common');
+common = require('../../../assets/js/common');
 
 window.$ = window.jQuery = require('jquery');
 let _ = require('underscore');

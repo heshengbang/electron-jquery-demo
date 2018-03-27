@@ -1,6 +1,6 @@
 const Backbone = require('backbone');
 const toDo = require('../collections/todos');
-const common = require('../common');
+const common = require('../../../assets/js/common');
 
 const Workspace = Backbone.Router.extend({
 	routes: {

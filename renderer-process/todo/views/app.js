@@ -4,9 +4,9 @@ window.Bootstrap = require('bootstrap');
 const _ = require('underscore');
 
 const Backbone = require('backbone');
-const TodoView = require('../views/todos');
+const TodoView = require('./todos');
 const todos = require('../collections/todos');
-const common = require('../common');
+const common = require('../../../assets/js/common');
 
 const AppView = Backbone.View.extend({
 
@@ -24,7 +24,7 @@ const AppView = Backbone.View.extend({
 		this.allCheckbox = this.$('#toggle-all')[0];
 		this.$input = this.$('#new-todo');
 		this.$footer = this.$('#footer');
-		this.$main = this.$('#main');
+		this.$main = this.$('#main-process');
 
 		this.listenTo(todos, 'add', this.addOne);
 		this.listenTo(todos, 'reset', this.addAll);

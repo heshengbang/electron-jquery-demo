@@ -18,7 +18,7 @@ function createWindow() {
 	//mainWindow = new BrowserWindow({width: 1200, height: 600, frame: false})
 	mainWindow = new BrowserWindow({width: 1200, height: 600});
 
-	// and load the index.html of the app.
+	// and load the index.html of the sections.
 	mainWindow.loadURL(url.format({
 		pathname: path.join(__dirname, 'index.html'),
 		protocol: 'file:',
@@ -31,7 +31,7 @@ function createWindow() {
 	// Emitted when the window is closed.
 	mainWindow.on('closed', () => {
 		// Dereference the window object, usually you would store windows
-		// in an array if your app supports multi windows, this is the time
+		// in an array if your sections supports multi windows, this is the time
 		// when you should delete the corresponding element.
 		mainWindow = null;
 	});
@@ -55,7 +55,7 @@ app.on('window-all-closed', () => {
 
 app.on('activate', () => {
 
-	// On OS X it's common to re-create a window in the app when the
+	// On OS X it's common to re-create a window in the sections when the
 	// dock icon is clicked and there are no other windows open.
 
 	if (mainWindow === null) {
@@ -67,5 +67,5 @@ ipcm.on('event-msg', (event) => {
 	event.sender.send('event-reply', 'pong');
 });
 
-// In this file you can include the rest of your app's specific main process
+// In this file you can include the rest of your sections's specific main-process process
 // code. You can also put them in separate files and require them here.

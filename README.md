@@ -1,4 +1,4 @@
-# my-electron-demo
+# electron-jquery-demo
 
 This project is a simple demo for electron.
 
