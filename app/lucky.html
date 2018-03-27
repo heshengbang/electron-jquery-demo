@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Hello Luck</title>
+    <title>Lucky Ball</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/lucky/style.css">
+    <link rel="stylesheet" href="../assets/css/common/common.css">
 </head>
 <body>
-Hello Luck
+<button id="go" data-text-start="Space to Start" data-text-stop="Space to Stop" data-action="start"></button>
+
+<div id="container">
+    <ul id="balls">
+    </ul>
+    <ul id="lucky-balls">
+    </ul>
+</div>
+
+<a id="back" href="../index.html">Back to Before</a>
 </body>
+<script>
+	require("../assets/js/lucky/lucky-main")
+</script>
 </html>
