@@ -62,10 +62,5 @@ app.on('activate', () => {
 		createWindow();
 	}
 });
-
-ipcm.on('event-msg', (event) => {
-	event.sender.send('event-reply', 'pong');
-});
-
 // In this file you can include the rest of your sections's specific main-process process
 // code. You can also put them in separate files and require them here.
