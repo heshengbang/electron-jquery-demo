@@ -4,7 +4,6 @@ const settings = require('electron-settings');
 document.body.addEventListener('click', (event) => {
 	//Html5 页面上通过使用data-*自定义属性标签来存放了自定义数据，js中通过dataset可以获取该方式定义的所有数据k-v集合
 	//通过key值读取dataset中section的值
-	window.console.dir('nav.js - addEventListener ' + event.target);
 	if (event.target.dataset.section) {
 		handleSectionTrigger(event);
 		//通过key值读取dataset中modal的值
@@ -12,13 +11,11 @@ document.body.addEventListener('click', (event) => {
 		handleModalTrigger(event);
 	} else if (event.target.classList.contains('modal-hide')) {
 		//该部分用来处理about.html中get start按钮的，主要操作是隐藏about.html
-		window.console.log('clicked in about.html');
 		hideAllModals();
 	}
 });
 //处理index.html中具有data-section属性的元素点击事件，原理是data-*
 function handleSectionTrigger(event) {
-	window.console.dir('section ' + event.target);
 	//清除页面的is-shown和左侧按钮is-selected样式
 	hideAllSectionsAndDeselectButtons();
 
@@ -40,7 +37,7 @@ function handleSectionTrigger(event) {
 //激活默认的section
 function activateDefaultSection() {
 	//触发导航栏第一个按钮的点击事件
-	document.getElementById('button-windows').click();
+	document.getElementById('button-lucky').click();
 }
 //展示左侧导航栏和右侧主内容栏
 function showMainContent() {
@@ -52,11 +49,9 @@ function showMainContent() {
 }
 //处理具有data-modal属性的元素点击时间，原理同data-section
 function handleModalTrigger(event) {
-	window.console.dir('modal ' + event.target);
 	hideAllModals();
 	//获得index.html中data-modal的元素
 	const modalId = `${event.target.dataset.modal}-modal`;
-	window.console.log(modalId);
 	//展示about.html
 	document.getElementById(modalId).classList.add('is-shown');
 }

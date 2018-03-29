@@ -14,7 +14,7 @@ module.exports = {
 	users: [],
 
 	init: function (data) {
-		window.$('#container').css('background', 'none');
+		window.$('#lucky-container').css('background', 'none');
 
 		this.data = data;
 		this.users = data.map(function (name) {
@@ -28,17 +28,16 @@ module.exports = {
 		let that = this;
 
 		// bind button
-		let trigger = document.querySelector('#go');
+		let trigger = document.querySelector('#lucky-go');
 		trigger.innerHTML = trigger.getAttribute('data-text-start');
-		trigger.addEventListener('click', go);
+		trigger.addEventListener('click', go, false);
 
 		function go() {
 			if (trigger.getAttribute('data-action') === 'start') {
 				trigger.setAttribute('data-action', 'stop');
 				trigger.innerHTML = trigger.getAttribute('data-text-stop');
 				that.start();
-			}
-			else {
+			} else {
 				trigger.setAttribute('data-action', 'start');
 				trigger.innerHTML = trigger.getAttribute('data-text-start');
 				that.stop();
@@ -46,7 +45,7 @@ module.exports = {
 		}
 
 		// bind #lucky-balls
-		window.$('#lucky-balls').on('click', 'li', function (e) {
+		window.$('#lucky-selected-balls').on('click', 'li', function (e) {
 			let el = window.$(e.target);
 			let name = el.text();
 
@@ -58,7 +57,7 @@ module.exports = {
 		});
 
 		// bind #balls
-		window.$('#balls').on('click', 'li', function (e) {
+		window.$('#lucky-balls').on('click', 'li', function (e) {
 			let el = window.$(e.target);
 			let name = el.text();
 
@@ -132,7 +131,7 @@ module.exports = {
 		let luckyUser = this.luckyUser;
 		if (luckyUser) {
 			luckyUser.el[0].style.cssText = '';
-			luckyUser.el.prependTo('#lucky-balls');
+			luckyUser.el.prependTo('#lucky-selected-balls');
 			this.removeItem(luckyUser);
 			this.luckyUser = null;
 			return true;

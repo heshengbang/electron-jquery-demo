@@ -1,6 +1,3 @@
-if (document.attachEvent) {
-	window.alert('这个例子不支持 Old IE 哦');
-}
 var data = [
 	'梓胥',
 	'李磊', '俊义', '兰玉',
@@ -13,7 +10,3 @@ var data = [
 var lucky = require('./lucky');
 
 lucky.init(data);
-
-window.$('#back').click(function () {
-	window.console.log('click');
-});

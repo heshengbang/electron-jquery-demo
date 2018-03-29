@@ -1,4 +1,4 @@
-body {
+.lucky-body {
   font: 20px "Hiragino Sans GB", sans-serif;
   background: #eee;
 }
@@ -7,21 +7,21 @@ ul li {
   list-style: none;
 }
 
-#container {
+#lucky-container {
   width: 900px;
   margin: 10px auto;
   position: relative;
 }
 
-#balls {
+#lucky-balls {
   padding: 0;
   margin: 0;
   list-style: none;
   height: 500px;
 }
 
-#balls li,
-#lucky-balls li {
+#lucky-balls li,
+#lucky-selected-balls li {
   position: absolute;
   left: 420px;
   top: 470px;
@@ -40,7 +40,7 @@ ul li {
   cursor: pointer;
 }
 
-#go {
+#lucky-go {
   width: 200px;
   height: 50px;
   display: block;
@@ -51,7 +51,7 @@ ul li {
   color: #999;
 }
 
-#balls li.selected {
+#lucky-balls li.selected {
   color: #fff;
   background: #f60;
   font-size: 40px;
@@ -64,13 +64,13 @@ ul li {
   z-index: 100;
 }
 
-#lucky-balls {
+#lucky-selected-balls {
   padding: 20px;
   margin: 10px 0;
   list-style: none;
 }
 
-#lucky-balls li {
+#lucky-selected-balls li {
   position: relative;
   left: auto !important;
   top: auto !important;

@@ -1,24 +1,14 @@
-<!doctype html>
-<html>
-<head>
-    <title>Lucky Ball</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/css/lucky/style.css">
-    <link rel="stylesheet" href="../assets/css/common/common.css">
-</head>
-<body>
-<button id="go" data-text-start="Space to Start" data-text-stop="Space to Stop" data-action="start"></button>
-
-<div id="container">
-    <ul id="balls">
-    </ul>
-    <ul id="lucky-balls">
-    </ul>
-</div>
-
-<a id="back" href="../index.html">Back to Before</a>
-</body>
-<script>
-	require("../renderer-process/lucky/lucky-main")
-</script>
-</html>
+<template class="task-template">
+    <section id="lucky-section" class="section js-section u-category-windows">
+        <button id="lucky-go" data-text-start="Space to Start" data-text-stop="Space to Stop" data-action="start"></button>
+        <div id="lucky-container">
+            <ul id="lucky-balls">
+            </ul>
+            <ul id="lucky-selected-balls">
+            </ul>
+        </div>
+    </section>
+    <script type="text/javascript">
+		require("./renderer-process/lucky/lucky-main")
+    </script>
+</template>

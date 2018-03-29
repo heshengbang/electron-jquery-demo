@@ -45,14 +45,14 @@
 }
 
 /*hello.css begin*/
-#container {
+#about-container {
 	position: relative;
 	margin: 40px 40px 40px 10px;
 	background: no-repeat;
 	min-height: 32px;
 }
 
-#container img {
+#about-container img {
 	position: absolute;
 	cursor: pointer;
 	opacity: .6;

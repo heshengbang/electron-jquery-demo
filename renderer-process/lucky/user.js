@@ -1,4 +1,4 @@
-const $ = require('jquery');
+window.$ = window.jQuery = require('jquery');
 
 const CANVAS_HEIGHT = 500;
 const CANVAS_WIDTH = 900;
@@ -36,7 +36,7 @@ function User(name, options) {
 module.exports = User;
 
 User.prototype.createEl = function () {
-	this.el = $('<li>' + this.name + '</li>').appendTo('#balls');
+	this.el = window.$('<li>' + this.name + '</li>').appendTo('#lucky-balls');
 	this.width = this.el.width();
 	this.height = this.el.height();
 };
