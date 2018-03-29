@@ -44,6 +44,31 @@
 	max-width: 100%;
 }
 
+/*hello.css begin*/
+#container {
+	position: relative;
+	margin: 40px 40px 40px 10px;
+	background: no-repeat;
+	min-height: 32px;
+}
+
+#container img {
+	position: absolute;
+	cursor: pointer;
+	opacity: .6;
+	display: none;
+
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	-o-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+}
+/*hello.css end*/
+
 .about-sections {
 	max-width: 680px;
 	padding: 0 var(--about-space);
@@ -141,11 +166,11 @@ footer.about-section {
 .rainbow-button-wrapper:hover:before {
 	background-position: 200px 0;
 }
-
+/*这段主要作用是让head 和body左右展示*/
 @media (min-width: 940px) {
 	.about-header {
 		align-self: center;
-		padding: var(--about-space);
+		/*padding: var(--about-space);*/
 		border-right: 1px solid hsl(0,0%,88%);
 		border-bottom: none;
 	}

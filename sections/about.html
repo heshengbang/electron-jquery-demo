@@ -2,7 +2,15 @@
     <div id="about-modal" class="about modal">
         <div class="about-wrapper">
             <header class="about-header">
-                <img class="about-logo" src="assets/img/about.png" srcset="assets/img/about.png 1x, assets/img/about@2x.png 2x" alt="Electron API Demos">
+                <div class="about-logo">
+                    <div id="container">
+                        <img src="assets/img/h.png" width="44" height="44" alt="H">
+                        <img src="assets/img/e.png" width="44" height="44" alt="e">
+                        <img src="assets/img/l.png" width="44" height="44" alt="l">
+                        <img src="assets/img/l.png" width="44" height="44" alt="l">
+                        <img src="assets/img/o.png" width="44" height="44" alt="o">
+                    </div>
+                </div>
             </header>
             <main class="about-sections">
                 <section class="about-section play-along">
@@ -29,4 +37,7 @@ $ npm install &amp;&amp; npm start
             </main>
         </div>
     </div>
+    <script>
+		require("./renderer-process/hello/hello-main");
+    </script>
 </template>
