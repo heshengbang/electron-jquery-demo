@@ -26,6 +26,7 @@ function handleSectionTrigger(event) {
 	// Display the current section 展示当前的section
 	//通过event获取事件的元素进而得到data-*的自定义数据k-v集合，从而获得当前应被展示的section
 	const sectionId = `${event.target.dataset.section}-section`;
+	window.console.log('test   ' + document.getElementById(sectionId));
 	//给应展示的section添加is-shown样式
 	document.getElementById(sectionId).classList.add('is-shown');
 

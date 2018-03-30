@@ -10,20 +10,20 @@ const common = require('../../../assets/js/common');
 
 const AppView = Backbone.View.extend({
 
-	el: '#todoapp',
+	el: '#todo-section',
 
-	statsTemplate: _.template(window.$('#stats-template').html()),
+	statsTemplate: _.template(window.$('#todo-stats-template').html()),
 
 	events: {
 		'keypress #new-todo': 'createOnEnter',
-		'click #clear-completed': 'clearCompleted',
-		'click #toggle-all': 'toggleAllComplete'
+		'click #todo-clear-completed': 'clearCompleted',
+		'click #todo-toggle-all': 'toggleAllComplete'
 	},
 
 	initialize: function () {
-		this.allCheckbox = this.$('#toggle-all')[0];
+		this.allCheckbox = this.$('#todo-toggle-all')[0];
 		this.$input = this.$('#new-todo');
-		this.$footer = this.$('#footer');
+		this.$footer = this.$('#todo-footer');
 		this.$main = this.$('#main-process');
 
 		this.listenTo(todos, 'add', this.addOne);
@@ -48,7 +48,7 @@ const AppView = Backbone.View.extend({
 				remaining: remaining
 			}));
 
-			this.$('#filters li a')
+			this.$('#todo-filters li a')
 				.removeClass('selected')
 				.filter('[href="#/' + (common.TodoFilter || '') + '"]')
 				.addClass('selected');

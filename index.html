@@ -46,16 +46,17 @@
     <link rel="stylesheet" href="./assets/css/common/demo.css">
     <link rel="stylesheet" href="./assets/css/common/github.css">
     <link rel="stylesheet" href="assets/css/lucky/lucky-style.css">
+    <link rel="stylesheet" href="assets/css/todo/todo-base.css">
 
     <link rel="import" href="sections/about.html">
     <link rel="import" href="sections/lucky.html">
-    <link rel="import" href="sections/windows/crash-hang.html">
+    <link rel="import" href="sections/todo.html">
 </head>
 <body>
 
 <nav class="nav js-nav">
     <header class="nav-header">
-        <h1 class="nav-title">Electron <strong>JQuery Demo</strong></h1>
+        <h1 class="nav-title"><strong>Electron JQuery</strong> Demo</h1>
     </header>
 
     <div class="nav-item u-category-windows">
@@ -67,7 +68,17 @@
         </h5>
         <!--data-section是使用html中的data-*标签来存放自定义数据-->
         <button type="button" id="button-lucky" data-section="lucky" class="nav-button">
-            Open <em>Luck</em> page
+            <em>Luck Page</em>
+        </button>
+    </div>
+
+    <div class="nav-item u-category-system">
+        <h5 class="nav-category">
+            <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-system"></use></svg>
+            System
+        </h5>
+        <button type="button" id="button-todo" data-section="todo" class="nav-button" >
+            <em>TO DO</em>
         </button>
     </div>
 
