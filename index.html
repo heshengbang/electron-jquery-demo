@@ -45,12 +45,14 @@
     <link rel="stylesheet" href="./assets/css/common/section.css">
     <link rel="stylesheet" href="./assets/css/common/demo.css">
     <link rel="stylesheet" href="./assets/css/common/github.css">
-    <link rel="stylesheet" href="assets/css/lucky/lucky-style.css">
-    <link rel="stylesheet" href="assets/css/todo/todo-base.css">
+    <link rel="stylesheet" href="./assets/css/lucky/lucky-style.css">
+    <link rel="stylesheet" href="./assets/css/todo/todo-base.css">
+    <link rel="stylesheet" href="./assets/css/ng-todo/todo-ng-base.css">
 
     <link rel="import" href="sections/about.html">
     <link rel="import" href="sections/lucky.html">
     <link rel="import" href="sections/todo.html">
+    <link rel="import" href="sections/ng-todo.html">
 </head>
 <body>
 
@@ -74,11 +76,14 @@
 
     <div class="nav-item u-category-system">
         <h5 class="nav-category">
-            <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-system"></use></svg>
-            System
+            <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-native-ui"></use></svg>
+            TO DO
         </h5>
         <button type="button" id="button-todo" data-section="todo" class="nav-button" >
-            <em>TO DO</em>
+            JQuery JS <em>TO DO</em>
+        </button>
+        <button type="button" id="button-ng-todo" data-section="ng-todo" class="nav-button" >
+            Angular JS <em>TO DO</em>
         </button>
     </div>
 

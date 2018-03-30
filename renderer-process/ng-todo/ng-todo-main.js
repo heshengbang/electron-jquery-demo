@@ -6,7 +6,6 @@ let todo = angular.module('TodoApp', []);
 
 todo.service('todoService', todoService);
 
-//TDDO Angular master code has been implemented
 todo.directive('ngBlur', function () {
 	return function (scope, elem, attrs) {
 		elem.bind('blur', function () {

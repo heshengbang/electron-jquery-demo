@@ -1,10 +1,10 @@
 html,
-body {
+.todo-ng-body {
 	margin: 0;
 	padding: 0;
 }
 
-button {
+.todo-ng-button {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -20,7 +20,7 @@ button {
 	appearance: none;
 }
 
-body {
+.todo-ng-body {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
 	background: #eaeaea url('../../img/bg.png');
