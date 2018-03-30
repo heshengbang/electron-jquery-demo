@@ -4,7 +4,6 @@ module.exports = function () {
 	let todos = [];
 
 	if (store.enabled) {
-		window.console.log('localStorage is available');
 		todos = store.get('todos') || store.set('todos', todos);
 	}
 
